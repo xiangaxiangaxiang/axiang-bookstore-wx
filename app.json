@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/classic/classic"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFF00",
+    "navigationBarTitleText": "阿翔书店",
+    "navigationStyle": "default",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff"
+  }
+}
