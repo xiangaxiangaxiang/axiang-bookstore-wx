@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "like-cmp": "/components/like/index"
+  }
 }

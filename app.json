@@ -3,10 +3,11 @@
     "pages/classic/classic"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#FFFF00",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "阿翔书店",
     "navigationStyle": "default",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff"
-  }
+  },
+  "sitemapLocation": "sitemap6.json"
 }
