@@ -1,3 +1,4 @@
 export const config = {
-  apiBaseUrl: "http://localhost:8020/v1"
+  apiBaseUrl: "http://bl.7yue.pro/v1",
+  appKey: "Jgrcb4d7DoAgSq7U"
 }

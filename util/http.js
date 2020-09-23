@@ -14,13 +14,14 @@ export class Http {
       url: config.apiBaseUrl + params.url,
       data: params.data,
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        'appkey': config.appKey
       },
       method: params.method,
       success: res => {
         const code = res.statusCode.toString()
-        if (code.startsWith(2)) {
-          params.success(res.data)
+        if (code.startsWith('2')) {
+          params.success && params.success(res.data)
         } else {
           const errorCode = res.data.error_code
           this._showError(errorCode)
