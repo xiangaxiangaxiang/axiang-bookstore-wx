@@ -12,7 +12,9 @@ Page({
   data: {
     classic: null,
     latest: true,
-    first: false
+    first: false,
+    likeStatus: false,
+    likeCount: 0
   },
 
   /**
@@ -21,7 +23,9 @@ Page({
   onLoad: function (options) {
     classicModel.getLatest(res => {
       this.setData({
-        classic: res
+        classic: res,
+        likeCount: res.fav_nums,
+        likeStatus: res.like_status
       })
     })
   },
