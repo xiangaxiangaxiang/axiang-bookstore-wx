@@ -9,7 +9,14 @@
       count="{{likeCount}}"
     />
   </view>
-  <movie-cmp img="{{classic.image}}" content="{{classic.content}}" />
+  <movie-cmp hidden="{{classic.type!=100}}" img="{{classic.image}}" content="{{classic.content}}" />
+  <music-cmp
+    wx:if="{{classic.type==200}}"
+    img="{{classic.image}}"
+    src="{{classic.url}}"
+    content="{{classic.content}}"
+  />
+  <essay-cmp hidden="{{classic.type!=300}}" img="{{classic.image}}" content="{{classic.content}}" />
   <navi-cmp
     title="{{classic.title}}"
     first="{{first}}"
