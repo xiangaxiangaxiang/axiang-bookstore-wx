@@ -1,4 +1,4 @@
-// components/navi/index.js
+// components/navi/navi.js
 Component({
   /**
    * 组件的属性列表
@@ -23,15 +23,17 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onLeft(event) {
+    onLeft: function (event) {
       if (!this.properties.latest) {
         this.triggerEvent('left', {}, {})
       }
     },
-    onRight(event) {
+
+    onRight: function (event) {
       if (!this.properties.first) {
         this.triggerEvent('right', {}, {})
       }
     }
+
   }
 })

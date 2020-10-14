@@ -43,7 +43,9 @@ Component({
         this.setData({
           playing: true
         })
+        console.log(this.properties.src)
         mMgr.src = this.properties.src
+        console.log(this.properties.src, mMgr.src)
         mMgr.title = this.properties.title
       } else {
         this.setData({
