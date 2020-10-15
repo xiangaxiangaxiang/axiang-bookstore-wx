@@ -1,4 +1,4 @@
-<!-- for 循环 wx:for -->
+ <!-- for 循环 wx:for -->
 <view wx:if="{{!searching}}" class="container">
     <view class="header">
         <view class='box' bind:tap="onSearching">

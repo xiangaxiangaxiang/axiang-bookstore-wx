@@ -11,7 +11,7 @@ export class BookModel extends Http {
 
   search(start, q) {
     return this.request({
-      url: 'book/search?summary=1',
+      url: '/book/search?summary=1',
       data: {
         q: q,
         start: start
@@ -27,7 +27,7 @@ export class BookModel extends Http {
 
   getDetail(bid) {
     return this.request({
-      url: `book/${bid}/detail`
+      url: `/book/${bid}/detail`
     })
   }
 
@@ -39,14 +39,14 @@ export class BookModel extends Http {
 
   getComments(bid) {
     return this.request({
-      url: `book/${bid}/short_comment`
+      url: `/book/${bid}/short_comment`
     })
   }
 
 
   postComment(bid, comment) {
     return this.request({
-      url: 'book/add/short_comment',
+      url: '/book/add/short_comment',
       method: 'POST',
       data: {
         book_id: bid,
