@@ -62,6 +62,6 @@
     padding: 0 90rpx;
 }
 
-.books-container v-book{
+.books-container book-cmp{
     margin-bottom: 10rpx;
 }

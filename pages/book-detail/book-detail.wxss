@@ -136,6 +136,16 @@
     align-items: center;
 }
 
+.share-btn {
+    margin-top: 28rpx;
+    margin-left: 10rpx;
+}
+
+.share {
+    width: 40rpx;
+    height: 40rpx;
+}
+
 .posting-container {
     bottom: 0;
     position: fixed;

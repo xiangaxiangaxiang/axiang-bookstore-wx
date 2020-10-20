@@ -2,12 +2,17 @@
 <view class="container">
   <view class="header">
     <episode-cmp class="episode" index="{{classic.index}}" />
-    <like-cmp
-      class="like"
-      bind:like="onLike"
-      like="{{likeStatus}}"
-      count="{{likeCount}}"
-    />
+    <view class="like-container">
+      <like-cmp
+        class="like"
+        bind:like="onLike"
+        like="{{likeStatus}}"
+        count="{{likeCount}}"
+      />
+      <button-cmp class="share-btn" open-type="share">
+          <image class="share" slot="img" src="/images/icon/share.png" />
+      </button-cmp>
+    </view>
   </view>
   <movie-cmp hidden="{{classic.type!=100}}" img="{{classic.image}}" content="{{classic.content}}" />
   <music-cmp
