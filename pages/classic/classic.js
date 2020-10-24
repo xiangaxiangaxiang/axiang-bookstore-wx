@@ -4,7 +4,7 @@ import { LikeModel } from '../../models/like.js'
 const classicModel = new ClassicModel()
 const likeModel = new LikeModel()
 
-Page({
+Component({
 
   properties: {
     cid: Number,
@@ -25,6 +25,7 @@ Page({
   attached(options) {
     const cid = this.properties.cid
     const type = this.properties.type
+    console.log(cid, type)
     if (!cid) {
       classicModel.getLatest((res) => {
         this.setData({
@@ -46,20 +47,7 @@ Page({
     }
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log(this.properties.cid, this.properties.type)
-    classicModel.getLatest(res => {
-      this.setData({
-        classic: res,
-        likeCount: res.fav_nums,
-        likeStatus: res.like_status
-      })
-    })
-  },
-
+  methods: {
     onLike(event) {
       const behavior = event.detail.behavior
       likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
@@ -94,5 +82,6 @@ Page({
           })
         })
     }
+  }
   
 })
